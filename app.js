@@ -9,13 +9,20 @@ var Article=require('./models/articles');
 const expressValidator=require('express-validator');
 const flash=require('connect-flash');
 const session=require('express-session');
+//const GridFsStorage=require('multer-gridfs-storage');
+const Grid=require('gridfs-stream');
+//const crypto=require('crypto');
+//const multer  = require('multer');
 
 mongoose.connect('mongodb://localhost/nodekb');
 let db=mongoose.connection;
 
+let gfs;
 //check connections
 
-db.once('open',function () {
+db.once('open',() =>{
+    gfs=Grid(db.db,mongoose.mongo);
+    gfs.collection('uploads');
    console.log('connected to MongoDb');
 });
 
