@@ -67,7 +67,7 @@ router.post('/',upload.single('file'),function (req,res) {
         article.title=req.body.title;
         article.author=req.body.author;
         article.body=req.body.body;
-        article.file=req.file;
+        article.file=req.file.path;
         article.save(function (err) {
             if(err){
                 console.log('its in save');
