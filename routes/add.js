@@ -4,6 +4,7 @@ const crypto=require('crypto');
 const multer  = require('multer');
 const GridFsStorage=require('multer-gridfs-storage');
 var router = express.Router();
+//get in multer
 
 var upload = multer({ dest: 'public/uploads/' });
 
@@ -67,6 +68,7 @@ router.post('/',upload.single('file'),function (req,res) {
         article.title=req.body.title;
         article.author=req.body.author;
         article.body=req.body.body;
+        //gets in file path
         article.file=req.file.path;
         article.save(function (err) {
             if(err){
