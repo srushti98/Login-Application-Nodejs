@@ -3,13 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b27c0eb2-fbf8-4bcf-885d-d1f5d23420f5" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/articles.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/articles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/add.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/add.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/add.pug" beforeDir="false" afterPath="$PROJECT_DIR$/views/add.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/register.pug" beforeDir="false" afterPath="$PROJECT_DIR$/views/register.pug" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -35,8 +28,8 @@
       <file leaf-file-name="add.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/add.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="46">
-              <caret line="69" column="29" selection-start-line="69" selection-start-column="29" selection-end-line="69" selection-end-column="29" />
+            <state relative-caret-position="116">
+              <caret line="69" column="34" selection-start-line="69" selection-start-column="34" selection-end-line="69" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -252,7 +245,7 @@
       <workItem from="1527876398658" duration="895000" />
       <workItem from="1528287088274" duration="9652000" />
       <workItem from="1528358901513" duration="8701000" />
-      <workItem from="1528468856532" duration="586000" />
+      <workItem from="1528468856532" duration="1333000" />
     </task>
     <task id="LOCAL-00001" summary="this is login app">
       <created>1525296035316</created>
@@ -268,11 +261,25 @@
       <option name="project" value="LOCAL" />
       <updated>1527876557761</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="this is login app">
+      <created>1528469660353</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1528469660353</updated>
+    </task>
+    <task id="LOCAL-00004" summary="this is login app">
+      <created>1528469966217</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1528469966217</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="95421000" />
+    <option name="totallyTimeSpent" value="96168000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
@@ -284,18 +291,17 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="531" y="22" width="767" height="688" extended-state="1" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.30551627" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1633888" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32838285" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.13842663" side_tool="true" weight="0.32673267" />
       <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.49848714" weight="0.32838285" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.8615734" weight="0.79818183" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.8615734" weight="0.30363035" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Mongo Explorer" order="3" visible="true" weight="0.28712872" />
+      <window_info active="true" anchor="right" id="Mongo Explorer" order="3" visible="true" weight="0.15355521" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.32909092" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
@@ -652,8 +658,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/add.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="69" column="29" selection-start-line="69" selection-start-column="29" selection-end-line="69" selection-end-column="29" />
+        <state relative-caret-position="116">
+          <caret line="69" column="34" selection-start-line="69" selection-start-column="34" selection-end-line="69" selection-end-column="34" />
         </state>
       </provider>
     </entry>
