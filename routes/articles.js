@@ -1,6 +1,7 @@
 const express= require('express');
 const router=express.router();
 
+
 app.get('/article/:id',function (req,res) {
     Article.findById(req.params.id,function(err,article) {
         if(err)
@@ -18,7 +19,23 @@ app.get('/article/:id',function (req,res) {
         }
     });
 });
+app.get('/article/file/:id',function (req,res) {
+    Article.findById(req.params.id,function(err,article) {
+        if(err)
+        {
+            console.log(err);
+        }
+        else
+        {
+            console.log(article);
+            res.render('hello',
+                {
+                    title:'hello',
 
+                });
+        }
+    });
+});
 //for edit article
 app.get('/article/edit/:id',function (req,res) {
     Article.findById(req.params.id,function(err,article) {

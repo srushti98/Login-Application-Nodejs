@@ -116,7 +116,44 @@ app.get('/article/:id',function (req,res) {
       }
   });
 });
+/*app.get('/article/:id/:file',function (req,res) {
+    Article.findById(req.params.id,function(err,article) {
+        if(err)
+        {
+            console.log(err);
+        }
+        else
+        {
+            console.log(article);
+            res.render('hello',
+                {
+                    title:article.file,
 
+                });
+        }
+    });
+});*/
+app.get('/article/:id/:file', (req, res) => {
+    gfs.files.findOne({ filename: req.params.file }, (err, file) => {
+        // Check if file
+        if (!file || file.length === 0) {
+            return res.status(404).json({
+                err: 'No file exists'
+            });
+        }
+
+        // Check if image
+        if (file.contentType === 'image/jpeg' || file.contentType === 'image/png') {
+            // Read output to browser
+            const readstream = gfs.createReadStream(file.filename);
+            readstream.pipe(res);
+        } else {
+            res.status(404).json({
+                err: 'Not an image'
+            });
+        }
+    });
+});
 //for edit article
 app.get('/article/edit/:id',function (req,res) {
     Article.findById(req.params.id,function(err,article) {
