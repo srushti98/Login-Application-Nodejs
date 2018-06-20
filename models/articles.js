@@ -18,6 +18,10 @@ let articleSchema=mongoose.Schema({
     file:{
         type:String,
         required:true
+    },
+    file2:{
+        type:String,
+        required:true
     }
 });
 

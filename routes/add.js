@@ -17,7 +17,7 @@ var router = express.Router();
        cb(null,new Date().toISOString()+file.originalname);
 
    }
-});*/
+});*///originalname
 //const upload=multer({storage:storage});
 //create storage engine
 const storage = new GridFsStorage({
@@ -45,8 +45,18 @@ router.get('/', function(req, res, next) {
     res.render('add', { title: 'add articles' });
     // res.render('index');
 });
-router.post('/',upload.single('file'),function (req,res) {
-
+var cpUpload = upload.fields([{ name: 'file' }, { name: 'file2'}]);
+//app.post('/cool-profile', cpUpload, function (req, res, next) {
+    // req.files is an object (String -> Array) where fieldname is the key, and the value is array of files
+    //
+    // e.g.
+    //  req.files['avatar'][0] -> File
+    //  req.files['gallery'] -> Array
+    //
+    // req.body will contain the text fields, if there were any
+//})
+//router.post('/',upload.single('file'),function (req,res) {
+router.post('/',cpUpload,function (req,res) {
     console.log(req.file);
     req.checkBody('title','Title is required').notEmpty();
     req.checkBody('author','Author is required').notEmpty();
@@ -70,7 +80,9 @@ router.post('/',upload.single('file'),function (req,res) {
         article.author=req.body.author;
         article.body=req.body.body;
         //gets in file path
-        article.file=req.file.filename;
+        //article.file=req.file.filename;   //for single file
+        article.file=req.files['file'][0].filename;
+        article.file2=req.files['file2'][0].filename;
         article.save(function (err) {
             if(err){
                 console.log('its in save');

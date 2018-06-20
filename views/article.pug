@@ -1,7 +1,9 @@
 extends layout
 block content
     h1=article.title
-    a(href="/article/"+article._id+"/"+article.file)=article.file
+    a(href="/article/get/"+article._id+"/"+article.file, target='_blank')=article.file
+    br
+    a(href="/article/mad/"+article._id+"/"+article.file2, target='_blank')=article.file2
     p=article.body
     hr
     a.btn.btn-default(href='/article/edit/'+article._id) Edit

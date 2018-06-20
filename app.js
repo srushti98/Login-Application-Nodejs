@@ -133,7 +133,7 @@ app.get('/article/:id',function (req,res) {
         }
     });
 });*/
-app.get('/article/:id/:file', (req, res) => {
+app.get('/article/get/:id/:file', (req, res) => {
     gfs.files.findOne({ filename: req.params.file }, (err, file) => {
         // Check if file
         if (!file || file.length === 0) {
@@ -143,15 +143,36 @@ app.get('/article/:id/:file', (req, res) => {
         }
 
         // Check if image
-        if (file.contentType === 'image/jpeg' || file.contentType === 'image/png') {
+        // if (file.contentType === 'image/jpeg' || file.contentType === 'image/png') {
             // Read output to browser
             const readstream = gfs.createReadStream(file.filename);
             readstream.pipe(res);
-        } else {
-            res.status(404).json({
-                err: 'Not an image'
+        //} else {
+        //     res.status(404).json({
+        //         err: 'Not an image'
+        //     });
+        //}
+    });
+});
+app.get('/article/mad/:id/:file2', (req, res) => {
+    gfs.files.findOne({ filename: req.params.file2 }, (err, file) => {
+        // Check if file
+        if (!file || file.length === 0) {
+            return res.status(404).json({
+                err: 'No file exists'
             });
         }
+
+        // Check if image
+        // if (file.contentType === 'image/jpeg' || file.contentType === 'image/png') {
+        // Read output to browser
+        const readstream = gfs.createReadStream(file.filename);
+        readstream.pipe(res);
+        //} else {
+        //     res.status(404).json({
+        //         err: 'Not an image'
+        //     });
+        //}
     });
 });
 //for edit article
